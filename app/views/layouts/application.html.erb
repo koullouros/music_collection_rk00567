@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MusicCollectionRk00567</title>
+    <title>Music Collection</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,24 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Music Collection</a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded = "false" aria-label="Toggle navigation">
+  			<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div id="main-navbar" class="collapse navbar-collapse">
+  			<ul class="navbar-nav mr-auto">
+  				<li class="navbar-item"> <%= link_to t('home_tab'), root_path, class: "nav-link" %> </li>
+  			</ul>
+  		</div>
+  	</nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <footer class="page-footer font-small">
+      <hr>
+      <p class="footer-copyright text-center py-3">Created by Rafael Koullouros</p>
+    </footer>
   </body>
 </html>

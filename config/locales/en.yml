@@ -30,4 +30,12 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app_title: Music Collection
+  app_description: A place to keep track of music albums, their tracks, and notes for each track.
+
+  home_tab: Home
+
+  home:
+    home:
+      title: Music Collection
+      welcome: Welcome to the music collection site!
