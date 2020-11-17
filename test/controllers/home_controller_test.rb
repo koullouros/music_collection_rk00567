@@ -2,8 +2,39 @@ require 'test_helper'
 
 class HomeControllerTest < ActionDispatch::IntegrationTest
   test "should get home" do
-    get home_home_url
+    get root_url
     assert_response :success
+
+    assert_select 'title', I18n.t('app_title')
+    assert_select 'h1', I18n.t('home.home.title')
+    assert_select 'p', I18n.t('home.home.welcome')
+  end
+
+  test "should get contact" do
+    get contact_url
+    assert_response :success
+
+    assert_template layout: 'application'
+
+    assert_select 'title', I18n.t('app_title')
+    assert_select 'h1', I18n.t('home.contact.title')
+    assert_select 'p', I18n.t('home.contact.prompt')
+  end
+
+  test "should post request contact but no email" do
+    post request_contact_url
+
+    assert_response :redirect
+    assert_not_empty flash[:alert]
+    assert_nil flash[:notice]
+  end
+
+  test "should post request contact" do
+    post request_contact_url, params: {name: "Rafael", email: "rafael@me.com", telephone: "1234567890", message: "Hello"}
+
+    assert_response :redirect
+    assert_nil flash[:alert]
+    assert_not_empty flash[:notice]
   end
 
 end

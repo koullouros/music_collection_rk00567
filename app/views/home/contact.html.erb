@@ -1,0 +1,26 @@
+<h1><%= t '.title' %></h1>
+<p><%= t '.prompt' %></p>
+
+<%= form_tag request_contact_path, method: 'post' do %>
+  <div class="form-row">
+  	<div class="col">
+      <%= text_field_tag :name, '', class: "form-control", placeholder: t('.name') %>
+  	</div>
+  </div>
+
+  <div class="form-row">
+  	<div class="col">
+  	  <%= email_field_tag :email, '', class: "form-control", placeholder: t('.email') %>
+  	</div>
+  </div>
+  <div class="form-row">
+  	<div class="col">
+      <%= text_area_tag :message, '', class: "form-control", placeholder: t('.message'), rows: "12" %>
+  	</div>
+  </div>
+  <div class="form-row">
+  	<div class="col">
+  		<button type="submit" class="btn btn-primary form-control"><%= t('.send') %></button>
+  	</div>
+  </div>
+<% end %>

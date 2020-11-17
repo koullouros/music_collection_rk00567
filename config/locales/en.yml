@@ -34,8 +34,21 @@ en:
   app_description: A place to keep track of music albums, their tracks, and notes for each track.
 
   home_tab: Home
+  contact_tab: Contact Us
 
   home:
     home:
       title: Music Collection
       welcome: Welcome to the music collection site!
+
+    contact:
+      title: Contact Us
+      prompt: If you would like to get in touch with us, please complete the following form.
+      name: Name
+      email: Email
+      message: Message
+      send: Send
+
+    request_contact:
+      no_email: No email was provided!
+      email_sent: Email was sent succesfully.
