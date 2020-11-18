@@ -15,6 +15,9 @@
  */
 @import "bootstrap";
 
+$footer_height: 25px;
+$background_color: white;
+
 body {
 	padding-top: 65px;
 }
@@ -28,7 +31,6 @@ body {
 }
 
 .page-footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
+	background: $background_color;
 }
