@@ -1,0 +1,32 @@
+<p>
+  <strong>Album:</strong>
+  <%= @track.album %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @track.title %>
+</p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @track.artist %>
+</p>
+
+<p>
+  <strong>Released:</strong>
+  <%= @track.released %>
+</p>
+
+<p>
+  <strong>Minutes:</strong>
+  <%= @track.minutes %>
+</p>
+
+<p>
+  <strong>Seconds:</strong>
+  <%= @track.seconds %>
+</p>
+
+<%= link_to 'Edit', edit_track_path(@track) %> |
+<%= link_to 'Back', tracks_path %>

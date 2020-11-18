@@ -11,7 +11,7 @@
           </p>
           <%= link_to 'View', album, class: "btn btn-sm btn-primary card-buttons", type: "button" %>
           <%= link_to 'Edit', edit_album_path(album), class: "btn btn-sm btn-secondary card-buttons", type: "button" %>
-          <%= link_to 'Delete', album, method: :delete, data: {confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger card-buttons", type: "button" %>
+          <%= link_to 'Delete', album, method: :delete, data: {confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger card-buttons", type: "button", :remote => true %>
         </div>
       </div>
     </div>

@@ -13,12 +13,12 @@
 //   line-height: 18px;
 // }
 
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
-
+// pre {
+//   background-color: #eee;
+//   padding: 10px;
+//   font-size: 11px;
+// }
+//
 // a {
 //   color: #000;
 //
@@ -31,20 +31,20 @@ pre {
 //     background-color: #000;
 //   }
 // }
-
-th {
-  padding-bottom: 5px;
-}
-
-td {
-  padding: 0 5px 7px;
-}
-
-div {
-  &.field, &.actions {
-    margin-bottom: 10px;
-  }
-}
+//
+// th {
+//   padding-bottom: 5px;
+// }
+//
+// td {
+//   padding: 0 5px 7px;
+// }
+//
+// div {
+//   &.field, &.actions {
+//     margin-bottom: 10px;
+//   }
+// }
 
 #notice {
   color: green;

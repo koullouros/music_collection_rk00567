@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Title:</strong>
   <%= @album.title %>
@@ -14,6 +12,33 @@
   <strong>Released:</strong>
   <%= @album.released %>
 </p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Artist</th>
+      <th scope="col">Released</th>
+      <th scope="col">Length</th>
+      <th scope="col">View notes</th>
+      <th scope="col">Edit track</th>
+      <th scope="col">Delete track</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @album.tracks.each do |track| %>
+    <tr id="track_<%= track.id %>">
+      <th><%= track.title %></th>
+      <th><%= track.artist %></th>
+      <th><%= track.released %></th>
+      <th><%= format("%02d", track.minutes) %>:<%= format("%02d", track.seconds) %></th>
+      <th></th>
+      <th><%= link_to 'Edit', edit_track_path(track)%></th>
+      <th><%= link_to 'Delete', track, method: :delete, data: { confirm: 'Are you sure?' }, :remote=> true %></th>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to 'Edit', edit_album_path(@album) %> |
 <%= link_to 'Back', albums_path %>
