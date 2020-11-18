@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  artist: MyString
+  title: Album1
+  artist: Artist1
   released: 2020-11-18
 
 two:
-  title: MyString
-  artist: MyString
+  title: Album2
+  artist: Artist2
   released: 2020-11-18
