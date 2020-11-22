@@ -23,6 +23,12 @@
   <%= format("%02d", @track.minutes) %>:<%= format("%02d", @track.seconds) %>
 </p>
 
+<p>
+  <strong>Average Rating:</strong>
+  <%= avg_rating(@track) %>
+</p>
+
+
 <h2>Reviews</h2>
 <table class="table">
   <thead>
