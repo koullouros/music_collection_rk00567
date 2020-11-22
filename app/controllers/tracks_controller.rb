@@ -1,5 +1,6 @@
 class TracksController < ApplicationController
   before_action :set_track, only: [:show, :edit, :update, :destroy]
+  before_action :set_album, only: [:new, :create]
 
   # GET /tracks
   # GET /tracks.json
@@ -14,7 +15,8 @@ class TracksController < ApplicationController
 
   # GET /tracks/new
   def new
-    @track = Track.new
+    # @track = Track.new
+    @track = @album.tracks.new
   end
 
   # GET /tracks/1/edit
@@ -24,7 +26,7 @@ class TracksController < ApplicationController
   # POST /tracks
   # POST /tracks.json
   def create
-    @track = Track.new(track_params)
+    @track = @album.tracks.new(track_params)
 
     respond_to do |format|
       if @track.save
@@ -71,5 +73,9 @@ class TracksController < ApplicationController
     # Only allow a list of trusted parameters through.
     def track_params
       params.require(:track).permit(:album_id, :title, :artist, :released, :minutes, :seconds)
+    end
+
+    def set_album
+      @album =  Album.find_by(id: params[:album_id]) || Album.find(track_params[:album_id])
     end
 end

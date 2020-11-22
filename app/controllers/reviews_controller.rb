@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
+  before_action :set_track, only: [:new, :create]
 
   # GET /reviews
   # GET /reviews.json
@@ -14,7 +15,8 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/new
   def new
-    @review = Review.new
+    # @review = Review.new
+    @review = @track.reviews.new
   end
 
   # GET /reviews/1/edit
@@ -24,7 +26,8 @@ class ReviewsController < ApplicationController
   # POST /reviews
   # POST /reviews.json
   def create
-    @review = Review.new(review_params)
+    # @review = Review.new(review_params)
+    @review = @track.reviews.new(review_params)
 
     respond_to do |format|
       if @review.save
@@ -70,5 +73,9 @@ class ReviewsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def review_params
       params.require(:review).permit(:name, :description, :rating, :track_id)
+    end
+
+    def set_track
+      @track =  Track.find_by(id: params[:track_id]) || Track.find(review_params[:track_id])
     end
 end

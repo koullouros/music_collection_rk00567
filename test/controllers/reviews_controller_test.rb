@@ -11,7 +11,7 @@ class ReviewsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_review_url
+    get new_review_url, params: {track_id: @review.track_id}
     assert_response :success
   end
 

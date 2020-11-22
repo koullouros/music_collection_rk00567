@@ -28,5 +28,6 @@
   <%= @track.seconds %>
 </p>
 
+<%= link_to 'Add Review', new_review_path(track_id: @track) %>
 <%= link_to 'Edit', edit_track_path(@track) %> |
 <%= link_to 'Back', tracks_path %>

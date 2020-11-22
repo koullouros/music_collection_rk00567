@@ -11,7 +11,7 @@ class TracksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_track_url
+    get new_track_url, params: {album_id: @track.album_id}
     assert_response :success
   end
 
