@@ -36,6 +36,11 @@ en:
   home_tab: Home
   contact_tab: Contact Us
   albums_tab: Albums
+  tracks_tab: Tracks
+
+  title: Title
+  artist: Artist
+  released: Released
 
   home:
     home:

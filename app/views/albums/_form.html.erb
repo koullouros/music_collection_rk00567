@@ -12,18 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: "form-control", placeholder: t('title')%>
   </div>
 
   <div class="field">
-    <%= form.label :artist %>
-    <%= form.text_field :artist %>
+    <%= form.text_field :artist, class: "form-control", placeholder: t('artist') %>
   </div>
 
   <div class="field">
-    <%= form.label :released %>
-    <%= form.date_select :released %>
+    <%= form.label :released %>:
+    <%= form.date_select :released, class: "form-control" %>
   </div>
 
   <div class="actions">

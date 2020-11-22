@@ -11,10 +11,9 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :album_id%>
-    <%= form.text_field :album_id %>
-  </div>
+
+  <%= form.hidden_field :album_id, value: @track.album.id %>
+
 
   <div class="field">
     <%= form.label :title %>

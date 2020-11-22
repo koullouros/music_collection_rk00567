@@ -1,6 +1,6 @@
 <p>
   <strong>Album:</strong>
-  <%= @track.album %>
+  <%= @track.album.title %>
 </p>
 
 <p>
@@ -19,15 +19,35 @@
 </p>
 
 <p>
-  <strong>Minutes:</strong>
-  <%= @track.minutes %>
+  <strong>Length:</strong>
+  <%= format("%02d", @track.minutes) %>:<%= format("%02d", @track.seconds) %>
 </p>
 
-<p>
-  <strong>Seconds:</strong>
-  <%= @track.seconds %>
-</p>
+<h2>Reviews</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Rating</th>
+      <th scope="col">Edit Review</th>
+      <th scope="col">Delete Review</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @track.reviews.each do |review| %>
+    <tr id="review_<%= review.id %>">
+      <th><%= review.name %>
+      <th><%= review.description %></th>
+      <th><%= review.rating %></th>
+      <th><%= link_to 'Edit', edit_review_path(review)%></th>
+      <th><%= link_to 'Delete', review, method: :delete, data: { confirm: 'Are you sure?' }, :remote=> true %></th>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<%= link_to 'Add Review', new_review_path(track_id: @track) %>
+
+<%= link_to 'Add Review', new_review_path(track_id: @track) %> |
 <%= link_to 'Edit', edit_track_path(@track) %> |
 <%= link_to 'Back', tracks_path %>

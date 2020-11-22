@@ -26,10 +26,7 @@
     <%= form.number_field :rating %>
   </div>
 
-  <div class="field">
-    <%= form.label :track_id %>
-    <%= form.text_field :track_id %>
-  </div>
+  <%= form.hidden_field :track_id, value: @review.track.id %>
 
   <div class="actions">
     <%= form.submit %>
