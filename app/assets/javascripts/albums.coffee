@@ -3,6 +3,3 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 # uses jquery to ensure all tags with class form-control are present before submitting contact email
-# $(document).ready(function() {
-#   $(".form-control").validate();
-# });

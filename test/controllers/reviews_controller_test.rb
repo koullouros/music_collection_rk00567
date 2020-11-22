@@ -5,11 +5,6 @@ class ReviewsControllerTest < ActionDispatch::IntegrationTest
     @review = reviews(:one)
   end
 
-  test "should get index" do
-    get reviews_url
-    assert_response :success
-  end
-
   test "should get new" do
     get new_review_url, params: {track_id: @review.track_id}
     assert_response :success

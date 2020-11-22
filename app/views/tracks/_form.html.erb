@@ -16,27 +16,22 @@
 
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, placeholder: t('title'), class: "form-control"  %>
   </div>
 
   <div class="field">
-    <%= form.label :artist %>
-    <%= form.text_field :artist %>
+    <%= form.text_field :artist, placeholder: t('artist'), class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :released %>
+    <%= form.label :released %>:
     <%= form.date_select :released %>
   </div>
 
   <div class="field">
-    <%= form.label :minutes %>
+    <%= form.label t('length') %>
     <%= form.number_field :minutes %>
-  </div>
-
-  <div class="field">
-    <%= form.label :seconds %>
+    :
     <%= form.number_field :seconds %>
   </div>
 

@@ -41,6 +41,9 @@ en:
   title: Title
   artist: Artist
   released: Released
+  length: Length
+  name: Name
+  description: Description
 
   home:
     home:
