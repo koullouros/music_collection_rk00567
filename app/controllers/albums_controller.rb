@@ -28,7 +28,7 @@ class AlbumsController < ApplicationController
 
     respond_to do |format|
       if @album.save
-        format.html { redirect_to @album, notice: 'Album was successfully created.' }
+        format.html { redirect_to @album, notice: t('album.created') }
         format.json { render :show, status: :created, location: @album }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class AlbumsController < ApplicationController
   def update
     respond_to do |format|
       if @album.update(album_params)
-        format.html { redirect_to @album, notice: 'Album was successfully updated.' }
+        format.html { redirect_to @album, notice: t('album.updated') }
         format.json { render :show, status: :ok, location: @album }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class AlbumsController < ApplicationController
   def destroy
     @album.destroy
     respond_to do |format|
-      format.html { redirect_to albums_url, notice: 'Album was successfully destroyed.' }
+      format.html { redirect_to albums_url, notice: t('album.deleted') }
       format.json { head :no_content }
     end
   end

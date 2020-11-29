@@ -1,22 +1,22 @@
 <p>
-  <strong>Name:</strong>
+  <strong><%= t('general.name')%>:</strong>
   <%= @review.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong><%= t('general.description') %>:</strong>
   <%= @review.description %>
 </p>
 
 <p>
-  <strong>Rating:</strong>
+  <strong><%= t('general.rating')%>:</strong>
   <%= @review.rating %>
 </p>
 
 <p>
-  <strong>Track:</strong>
+  <strong><%= t('general.track') %>:</strong>
   <%= @review.track %>
 </p>
 
-<%= link_to 'Edit', edit_review_path(@review) %>
-<%= link_to 'Back', tracks_path %>
+<%= link_to t('general.edit') , edit_review_path(@review) %>
+<%= link_to t('general.back'), tracks_path %>

@@ -16,11 +16,11 @@
 
 
   <div class="field">
-    <%= form.text_field :title, placeholder: t('title'), class: "form-control"  %>
+    <%= form.text_field :title, placeholder: t('general.title'), class: "form-control"  %>
   </div>
 
   <div class="field">
-    <%= form.text_field :artist, placeholder: t('artist'), class: "form-control" %>
+    <%= form.text_field :artist, placeholder: t('general.artist'), class: "form-control" %>
   </div>
 
   <div class="field">
@@ -29,7 +29,7 @@
   </div>
 
   <div class="field">
-    <%= form.label t('length') %>
+    <%= form.label t('general.length') %>
     <%= form.number_field :minutes, size: 2, maxlength: 2 %>
     :
     <%= form.number_field :seconds, size: 2, maxlength: 2 %>

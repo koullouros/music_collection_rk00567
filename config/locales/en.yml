@@ -33,17 +33,52 @@ en:
   app_title: Music Collection
   app_description: A place to keep track of music albums, their tracks, and notes for each track.
 
+  general:
+    show: Show
+    back: Back
+    view: View
+    edit: Edit
+    delete: Delete
+    details: Details
+    title: Title
+    artist: Artist
+    released: Released
+    description: Description
+    avgrating: Avg. Rating
+    name: Name
+    email: Email
+    track: Track
+    rating: Rating
+    length: Length
+
+  album:
+    new: New Album
+    created: Album was succesfully created.
+    updated: Album was succesfully updated.
+    deleted: Album was succesfully deleted.
+
+  track:
+    new: New Track
+    view: View Track
+    edit: Edit Track
+    delete: Delete Track
+    created: Track was succesfully created.
+    updated: Track was succesfully updated.
+    deleted: Track was succesfully deleted.
+
+  review:
+    view_reviews: View Reviews
+    edit: Edit Review
+    delete: Delete Review
+    created: Review was succesfully created.
+    updated: Review was succesfully updated.
+    deleted: Review was succesfully deleted.
+
   home_tab: Home
   contact_tab: Contact Us
   albums_tab: Albums
   tracks_tab: Tracks
 
-  title: Title
-  artist: Artist
-  released: Released
-  length: Length(minutes:seconds)
-  name: Name
-  description: Description
 
   home:
     home:
@@ -56,7 +91,7 @@ en:
         The reviews index path has been removed since there is no point in listing all
         reviews without their tracks. I have also added a helper method that calculates
         an average rating given a track. I have localised most strings too. As an
-        "advanced feature" I have used github github, link below.
+        "advanced feature" I have used github.
 
 
     contact:

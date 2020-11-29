@@ -1,5 +1,5 @@
 module ApplicationHelper
-  # calculates the average rating for a track
+  # calculates the average rating for a given track
   def avg_rating(track)
     total = 0
     n = 0

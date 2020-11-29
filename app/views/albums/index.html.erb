@@ -5,17 +5,17 @@
     <div class="col-md-4">
       <div class="card mb-4 box-shadow">
         <div class="card-body">
-          <p class="card-body">Name: <%= album.title %><br>
-            Artist: <%= album.artist %><br>
-            Released: <%= album.released %>
+          <p class="card-body"><%=t('general.title') + ': ' + album.title %><br>
+            <%= t('general.artist') + ': ' + album.artist %><br>
+            <%= t('general.released') + ': ' + album.released.strftime("%B %d %Y") %>
           </p>
-          <%= link_to 'View', album, class: "btn btn-sm btn-primary card-buttons", type: "button" %>
-          <%= link_to 'Edit', edit_album_path(album), class: "btn btn-sm btn-secondary card-buttons", type: "button" %>
-          <%= link_to 'Delete', album, method: :delete, data: {confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger card-buttons", type: "button", :remote => true %>
+          <%= link_to t('general.view'), album, class: "btn btn-sm btn-primary card-buttons", type: "button" %>
+          <%= link_to t('general.edit'), edit_album_path(album), class: "btn btn-sm btn-secondary card-buttons", type: "button" %>
+          <%= link_to t('general.delete'), album, method: :delete, data: {confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger card-buttons", type: "button", :remote => true %>
         </div>
       </div>
     </div>
   <% end %>
 </div>
 
-<%= link_to 'New Album', new_album_path %>
+<%= link_to t('album.new'), new_album_path %>

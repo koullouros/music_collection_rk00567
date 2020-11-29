@@ -30,7 +30,7 @@ class TracksController < ApplicationController
 
     respond_to do |format|
       if @track.save
-        format.html { redirect_to @track, notice: 'Track was successfully created.' }
+        format.html { redirect_to @track, notice: t('track.created') }
         format.json { render :show, status: :created, location: @track }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class TracksController < ApplicationController
   def update
     respond_to do |format|
       if @track.update(track_params)
-        format.html { redirect_to @track, notice: 'Track was successfully updated.' }
+        format.html { redirect_to @track, notice: t('track.updated') }
         format.json { render :show, status: :ok, location: @track }
       else
         format.html { render :edit }
@@ -58,8 +58,8 @@ class TracksController < ApplicationController
   def destroy
     @track.destroy
     respond_to do |format|
-      format.html { redirect_to tracks_url, notice: 'Track was successfully destroyed.' }
-      format.js {flash[:notice] = 'Track was deleted successfully.'}
+      format.html { redirect_to tracks_url, notice: t('track.deleted') }
+      format.js {flash[:notice] = t('track.deleted') }
       format.json { head :no_content }
     end
   end

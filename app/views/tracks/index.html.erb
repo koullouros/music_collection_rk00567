@@ -3,13 +3,13 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">Title</th>
-      <th scope="col">Artist</th>
-      <th scope="col">Released</th>
-      <th scope="col">Length</th>
-      <th scope="col">View Track</th>
-      <th scope="col">Edit track</th>
-      <th scope="col">Delete track</th>
+      <th scope="col"><%= t('general.title') %></th>
+      <th scope="col"><%= t('general.artist') %></th>
+      <th scope="col"><%= t('general.released') %></th>
+      <th scope="col"><%= t('general.length') %></th>
+      <th scope="col"><%= t('track.view') %></th>
+      <th scope="col"><%= t('track.edit') %></th>
+      <th scope="col"><%= t('track.delete') %></th>
     </tr>
   </thead>
   <tbody>
@@ -19,9 +19,9 @@
       <th><%= track.artist %></th>
       <th><%= track.released %></th>
       <th><%= format("%02d", track.minutes) %>:<%= format("%02d", track.seconds) %></th>
-      <th><%= link_to 'Details', track_path(track) %></th>
-      <th><%= link_to 'Edit', edit_track_path(track)%></th>
-      <th><%= link_to 'Delete', track, method: :delete, data: { confirm: 'Are you sure?' }, :remote=> true %></th>
+      <th><%= link_to t('general.details'), track_path(track) %></th>
+      <th><%= link_to t('general.edit'), edit_track_path(track)%></th>
+      <th><%= link_to t('general.delete'), track, method: :delete, data: { confirm: 'Are you sure?' }, :remote=> true %></th>
     </tr>
     <% end %>
   </tbody>

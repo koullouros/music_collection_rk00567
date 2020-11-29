@@ -33,11 +33,11 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Description</th>
-      <th scope="col">Rating</th>
-      <th scope="col">Edit Review</th>
-      <th scope="col">Delete Review</th>
+      <th scope="col"><%= t('general.name') %></th>
+      <th scope="col"><%= t('general.description') %></th>
+      <th scope="col"><%= t('general.rating') %></th>
+      <th scope="col"><%= t('review.edit') %></th>
+      <th scope="col"><%= t('review.delete') %></th>
     </tr>
   </thead>
   <tbody>
@@ -46,8 +46,8 @@
       <th><%= review.name %>
       <th><%= review.description %></th>
       <th><%= review.rating %></th>
-      <th><%= link_to 'Edit', edit_review_path(review)%></th>
-      <th><%= link_to 'Delete', review, method: :delete, data: { confirm: 'Are you sure?' }, :remote=> true %></th>
+      <th><%= link_to t('general.edit'), edit_review_path(review)%></th>
+      <th><%= link_to t('general.delete'), review, method: :delete, data: { confirm: 'Are you sure?' }, :remote=> true %></th>
     </tr>
     <% end %>
   </tbody>
