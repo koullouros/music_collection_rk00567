@@ -41,7 +41,7 @@ en:
   title: Title
   artist: Artist
   released: Released
-  length: Length
+  length: Length(minutes:seconds)
   name: Name
   description: Description
 

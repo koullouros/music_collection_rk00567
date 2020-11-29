@@ -30,9 +30,9 @@
 
   <div class="field">
     <%= form.label t('length') %>
-    <%= form.number_field :minutes %>
+    <%= form.number_field :minutes, size: 2, maxlength: 2 %>
     :
-    <%= form.number_field :seconds %>
+    <%= form.number_field :seconds, size: 2, maxlength: 2 %>
   </div>
 
   <div class="actions">

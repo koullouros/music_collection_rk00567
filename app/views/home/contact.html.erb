@@ -1,7 +1,7 @@
 <h1><%= t '.title' %></h1>
 <p><%= t '.prompt' %></p>
 
-<%= form_tag request_contact_path, method: 'post' do %>
+<%= form_tag request_contact_path, method: 'post', id: 'contact-form' do %>
   <div class="form-row">
   	<div class="col">
       <%= text_field_tag :name, '', class: "form-control", placeholder: t('.name'), id: "name" %>

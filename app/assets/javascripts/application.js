@@ -18,3 +18,23 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+//= require jquery.validate
+
+$().ready(function() {
+  $("#contact-form").validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 3
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      message: {
+        required: true
+      }
+    }
+  });
+});
