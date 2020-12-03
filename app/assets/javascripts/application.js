@@ -37,4 +37,7 @@ $().ready(function() {
       }
     }
   });
+  $("#c_info").click(function(){
+    $("#info").slideToggle("slow");
+  });
 });

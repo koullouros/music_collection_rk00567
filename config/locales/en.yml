@@ -85,13 +85,16 @@ en:
       title: Music Collection
       welcome: Welcome to the music collection site!
       introduction: |
+        Welcome to the music collection website! Here you can add albums, tracks,
+        and review each track!
+      info: |
         This website uses 3 models. Album, Track and Review. Each album can
         contain tracks, and each track can have reviews. The websites front-end relies
-        a lot on bootstrap. JQuery is used as form validation in the contact us form.
-        The reviews index path has been removed since there is no point in listing all
-        reviews without their tracks. I have also added a helper method that calculates
-        an average rating given a track. I have localised most strings too. As an
-        "advanced feature" I have used github.
+        a lot on bootstrap. JQuery is used as form validation in the contact us form, and
+        also here on the homepage for the slide animation. The reviews index path has been
+        removed since there is no point in listing all reviews without their tracks.
+        I have also added a helper method that calculates an average rating given a track.
+        I have localised most strings too. I have also used github.
 
 
     contact:
