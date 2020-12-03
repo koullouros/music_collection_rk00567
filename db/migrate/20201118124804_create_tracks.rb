@@ -1,6 +1,7 @@
 class CreateTracks < ActiveRecord::Migration[5.2]
   def change
     create_table :tracks do |t|
+      # a track belongs to an album
       t.belongs_to :album, foreign_key: true, null: false
       t.string :title, null: false
       t.string :artist, null: false

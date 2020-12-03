@@ -4,7 +4,8 @@ class CreateReviews < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :description
       t.integer :rating
-      t.belongs_to :track, foreign_key: true
+      # a review belongs to a track
+      t.belongs_to :track, foreign_key: true, null: false
 
       t.timestamps
     end
