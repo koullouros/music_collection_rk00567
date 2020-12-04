@@ -2,7 +2,6 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 // # uses jquery to ensure all tags with class form-control are present before submitting contact email
-
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
@@ -11,6 +10,7 @@
 //= require turbolinks
 //= require_tree .
 //= require jquery.validate
+
 
 $(document).on('turbolinks:load', function() {
   // validation for the contact form

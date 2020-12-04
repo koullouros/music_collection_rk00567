@@ -18,31 +18,3 @@
 //= require turbolinks
 //= require_tree .
 //= require jquery.validate
-
-
-$(document).on('page:load', function() {
-  // validation for the contact form
-  $("#contact-form").validate({
-    rules: {
-      // name should be present with a length of at least 3
-      name: {
-        required: true,
-        minlength: 3
-      },
-      // email should be present
-      email: {
-        required: true,
-        email: true
-      },
-      // a valid message should be present
-      message: {
-        required: true
-      }
-    }
-  });
-
-  // toggle animation in home screen
-  $("#c_info").click(function(){
-    $("#info").slideToggle("slow");
-  });
-});
