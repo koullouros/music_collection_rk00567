@@ -10,7 +10,6 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-
 //= require jquery.validate
 
 $(document).on('turbolinks:load', function() {
